@@ -1,0 +1,15 @@
+@import "../base/mixin";
+@import "../base/variables";
+
+/*Estilos de Index*/
+.contenedor{
+    @include grid(80%,1fr,repeat(2, 1fr),2rem,$margin-grid);
+    div{
+        img{
+            @include imagenes;
+            border: 2px solid black;
+            box-shadow: 0 0 20px black;
+            border-radius: $border-radius-iframe;
+        }
+    }   
+}

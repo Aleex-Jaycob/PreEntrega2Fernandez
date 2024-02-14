@@ -1,0 +1,28 @@
+@import "../base/mixin";
+@import "../base/variables";
+
+/*Estilos de Tienda*/
+.productos-tienda{
+    @include grid(80%,repeat(2,2fr), repeat(2, 2fr),1rem, 2rem 2rem);
+    justify-content: center;
+    align-items: center;
+
+    
+    div{
+        .producto-5, .producto-6, .producto-7, .producto-8{
+            display: none;
+        }
+        img{
+            @include imagenes;
+            border-radius: $border-radius-iframe;
+            box-shadow: 0 0 20px black;
+            cursor: pointer;
+        }
+        img:hover{
+            transform: scale(1.1,1.1);
+        }
+        p{
+            @include parrafos;
+        }
+    }
+}

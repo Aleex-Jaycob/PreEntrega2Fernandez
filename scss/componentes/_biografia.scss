@@ -1,0 +1,17 @@
+@import "../base/mixin";
+@import "../base/variables";
+
+/*Estilos de Biografia*/
+main{
+    .biografia{
+        @include flex-biografia;
+        iframe{
+            border-radius: $border-radius-iframe;
+            width: $width-cienporciento;
+            margin: 20px;            
+        }
+        p{
+            @include biografia-parrafo;
+        }
+    }
+}
