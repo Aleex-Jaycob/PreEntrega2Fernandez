@@ -3,15 +3,30 @@
 
 /*Estilos de Tienda*/
 .productos-tienda{
-    @include grid(80%,repeat(2,2fr), repeat(2, 2fr),1rem, 2rem 2rem);
+    @include grid(80%,repeat(2, 1fr), repeat(2, 1fr),1rem, 2rem 2rem);
     justify-content: center;
     align-items: center;
+    @include tablet{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 2fr);
+        
+        
+    }
 
     
     div{
         .producto-5, .producto-6, .producto-7, .producto-8{
             display: none;
+            @include tablet{
+                display: block;
+            }
         }
+        .p5, .p6, .p7, .p8{
+            display: none;
+            @include tablet{
+                display: block;
+            }
+        } 
         img{
             @include imagenes;
             border-radius: $border-radius-iframe;
@@ -23,6 +38,7 @@
         }
         p{
             @include parrafos;
+            font-size: 15px;
         }
     }
 }

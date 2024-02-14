@@ -81,10 +81,24 @@
     color: $color-negro;
     outline: none;
 }
+
 @mixin btn-formulario{
     color: $color-negro;
     border: $border-btn-formulario;
     background-color: $color-bc-de-btn;
     box-shadow: $box-shadow-btn-formulario  $color-sombra;
     cursor: pointer;
+}
+
+//Media Queries
+@mixin tablet{
+    @media screen and (min-width:600px){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width:1024px){
+        @content;
+    }
 }

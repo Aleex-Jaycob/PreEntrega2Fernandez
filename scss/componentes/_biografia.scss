@@ -5,13 +5,34 @@
 main{
     .biografia{
         @include flex-biografia;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        @include desktop{
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
         iframe{
             border-radius: $border-radius-iframe;
             width: $width-cienporciento;
-            margin: 20px;            
-        }
-        p{
-            @include biografia-parrafo;
+            margin: 20px;
+            @include tablet{
+                width: 48%;
+                margin: 5px;
+            }   
+            @include desktop{
+                width: 45%;
+                height: 50vh;
+            }
         }
     }
+    p{
+        @include biografia-parrafo;
+        
+    } 
 }
